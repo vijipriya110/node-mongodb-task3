@@ -4,7 +4,7 @@ import { addStudentsData, deleteStudentData, getAllStudents, getStudentById, upd
 
 const router = express.Router();
 
-
+//to get student data
 router.get("/all",async (req,res)=>{
     try {
         if( req.query.experience ){
@@ -15,7 +15,7 @@ router.get("/all",async (req,res)=>{
         }
         const students = await getAllStudents(req)
         if(students <= 0){
-        res.status(400).json({data :"user not fount"})//mista ke from .db("bsicdata")
+        res.status(400).json({data :"user not fount"})//mistake from .db("bsicdata")
         return;
     }
     res.status(200).json({data:students})
