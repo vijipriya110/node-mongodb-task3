@@ -3,7 +3,7 @@ import { addMentorsData, deleteMentorData, getAllMentors, getMentorsById, update
 
 const router = express.Router();
 
-
+//to get all mentors data
 router.get("/all",async (req,res)=>{
     try {
         const mentors = await getAllMentors(req)
